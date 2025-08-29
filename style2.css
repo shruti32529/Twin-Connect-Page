@@ -41,15 +41,12 @@ header {
   width: 100%;
   z-index: 1000;
 }
-
 .header-container {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* logo - navbar - button */
+  justify-content: space-between;
   width: 100%;
 }
-
-/* Logo left */
 .logo {
   font-size: 1.8rem;
   font-weight: 700;
@@ -57,12 +54,10 @@ header {
   text-decoration: none;
   flex: 0 0 auto;
 }
-
-/* Navbar right */
 .navbar {
   flex: 1;
   display: flex;
-  justify-content: flex-end;   /* ✅ shifted to right */
+  justify-content: flex-end;
 }
 .navbar ul {
   display: flex;
@@ -77,8 +72,6 @@ header {
 .navbar a:hover {
   color: #ff6b35;
 }
-
-/* Right button */
 .header-right {
   flex: 0 0 auto;
 }
@@ -183,32 +176,33 @@ header {
 
 /* Sections */
 .section {
-  padding: 4rem 2rem;   /* ⬅ reduced from 6rem */
+  padding: 4rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  scroll-margin-top: 80px;
 }
 .section h2 {
   font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 2rem;  /* ⬅ reduced from 3rem */
+  margin-bottom: 2rem;
   color: #ff6b35;
 }
 .section p, .section li {
   font-size: 1.1rem;
   line-height: 1.8;
   color: #d0d0d0;
-  margin-bottom: 1rem; /* ⬅ reduced from 1.5rem */
+  margin-bottom: 1rem;
 }
 
-/* Intro Section - TwinConnect fix */
+/* Intro Section */
 #intro {
   display: flex;
   flex-direction: column;
   align-items: center;     
   justify-content: center; 
   text-align: center;
-  padding: 40px 20px;  /* ⬅ reduced from 60px */
+  padding: 40px 20px;
 }
 #intro .intro-content {
   max-width: 800px;
@@ -217,7 +211,7 @@ header {
 #intro h2 {
   font-size: 50px;
   letter-spacing: -2px;
-  margin-bottom: 15px;  /* ⬅ reduced */
+  margin-bottom: 15px;
   color: #ff5722;
   font-weight: 700;
 }
@@ -225,11 +219,11 @@ header {
   font-size: 20px;
   line-height: 1.4;
   letter-spacing: -0.5px;
-  margin: 8px 0;  /* ⬅ reduced */
+  margin: 8px 0;
   color: #ddd;
 }
 #intro .intro-image {
-  margin-top: 20px;  /* ⬅ reduced */
+  margin-top: 20px;
 }
 #intro .intro-image img {
   max-width: 100%;
@@ -240,9 +234,9 @@ header {
 .vision {
   background: linear-gradient(135deg, rgba(255,107,53,0.05), rgba(247,147,30,0.05));
   border-radius: 20px;
-  padding: 3rem;   /* ⬅ reduced from 4rem */
+  padding: 3rem;
   text-align: center;
-  margin: 3rem 0;  /* ⬅ reduced from 4rem */
+  margin: 3rem 0;
 }
 .vision h3 {
   font-size: 1.8rem;
@@ -255,7 +249,7 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  margin-top: 2rem; /* ⬅ reduced */
+  margin-top: 2rem;
 }
 .use-case {
   background: #111;
@@ -288,7 +282,7 @@ header {
   align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
-  margin: 3rem 0;  /* ⬅ reduced from 4rem */
+  margin: 3rem 0;
 }
 .step {
   flex: 1;
@@ -326,23 +320,86 @@ header {
   color: #ff6b35;
 }
 
-/* Market */
-.market-placeholder {
-  background: rgba(255,255,255,0.03);
-  border: 2px dashed rgba(255,107,53,0.3);
-  border-radius: 15px;
-  padding: 3rem; /* ⬅ reduced */
+/* Market Section */
+.market-insights {
+  margin: 1.5rem auto;
   text-align: center;
-  margin: 2.5rem 0; /* ⬅ reduced */
+  max-width: 90%;
+}
+.market-insights h3 {
+  color: orange;
+  margin-bottom: 0.5rem;
+}
+.market-insights ul {
+  list-style-type: disc;
+  display: inline-block;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  text-align: left;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Container for graphs */
+.market-images-box {
+  border: 2px dashed orange;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #1a1a1a;
+  align-items: center;
+  text-align: center;
+}
+.market-images-box img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+/* Key Takeaways */
+.key-takeaways-box {
+  border: 2px dashed orange;
+  padding: 20px;
+  margin: 30px auto;
+  border-radius: 8px;
+  max-width: 800px;
+  background: #1a1a1a;
+  text-align: left;
+}
+.key-takeaways-box h3 {
+  text-align: center;
+  color: orange;
+  margin-bottom: 15px;
+}
+.key-takeaways-box ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.key-takeaways-box li {
+  margin-bottom: 10px;
+  color: #fff;
 }
 
 /* Contact */
 .contact-cta {
   background: linear-gradient(135deg, rgba(255,107,53,0.1), rgba(247,147,30,0.1));
   border-radius: 20px;
-  padding: 3rem; /* ⬅ reduced */
+  padding: 3rem;
   text-align: center;
-  margin: 3rem 0; /* ⬅ reduced */
+  margin: 3rem 0;
+}
+.contact-cta h2 {
+  margin-bottom: 1rem;
+  color: #ff6b35;
+}
+.contact-cta p {
+  margin-bottom: 2rem;
+  color: #ddd;
 }
 .contact-email {
   font-size: 1.3rem;
@@ -354,7 +411,6 @@ header {
   border-radius: 50px;
   transition: all 0.3s ease;
   display: inline-block;
-  margin-top: 1rem;
 }
 .contact-email:hover {
   background: #ff6b35;
@@ -366,14 +422,14 @@ header {
 footer {
   background: rgba(255,255,255,0.02);
   border-top: 1px solid rgba(255,255,255,0.1);
-  padding: 2rem 2rem; /* ⬅ reduced */
+  padding: 2rem 2rem;
   text-align: center;
 }
 .footer-links {
   display: flex;
   justify-content: center;
-  gap: 1.5rem; /* ⬅ reduced */
-  margin-bottom: 1.5rem; /* ⬅ reduced */
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
   flex-wrap: wrap;
 }
 .footer-links a {
@@ -411,4 +467,13 @@ footer {
     gap: 10px;
     text-align: center;
   }
+}
+
+/* Reduce gap above Market Opportunity */
+#market-opportunity {
+  margin-top: 2rem;
+  padding-top: 0;
+}
+.market-insights {
+  margin-top: 1rem;
 }
